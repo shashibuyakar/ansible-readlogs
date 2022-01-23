@@ -1,0 +1,7 @@
+[servers]
+server00 ansible_host=server00.quiz.example.neustar
+server01 ansible_host=server01.quiz.example.neustar
+server02 ansible_host=server02.quiz.example.neustar
+server03 ansible_host=server03.quiz.example.neustar
+server04 ansible_host=server04.quiz.example.neustar
+server05 ansible_host=server05.quiz.example.neustar

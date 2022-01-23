@@ -1,0 +1,24 @@
+---
+# tasks file for readlog
+# Authenticate  serverXX.quiz.example.neustar using ssh keys
+# Create inventory file for above servers
+# Download readlog role directory
+# Run
+  - name: Replace empty microseconds lines with 0 ms
+    replace:
+      path: /Users/shashidhar.buyakar/Downloads/MadeupLog.log
+      regexp: "Ultradns quiz application took  ms" 
+      replace: "Ultradns quiz application took 0 ms"
+      backup: yes
+
+  # - name: Transfer the python script
+  #   copy: src=script.py dest=/tmp mode=0777
+
+  - name: Run the python script
+    script: /Users/shashidhar.buyakar/leetcode/playbook/roles/readlog/files/script.py
+    register: python_result
+    
+  - name: Get stdout or stderr from the output
+    debug:
+      var: python_result.stdout_lines
+

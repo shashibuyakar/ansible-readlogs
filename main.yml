@@ -1,0 +1,9 @@
+---
+- name: Configure instance(s)
+  hosts: localhost
+  become: yes
+  become_user: root
+  remote_user: ec2-user 
+  roles:
+    - readlog
+
