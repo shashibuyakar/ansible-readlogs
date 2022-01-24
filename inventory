@@ -5,3 +5,6 @@ server02 ansible_host=server02.quiz.example.neustar
 server03 ansible_host=server03.quiz.example.neustar
 server04 ansible_host=server04.quiz.example.neustar
 server05 ansible_host=server05.quiz.example.neustar
+
+[dev]
+dev1 ansible_host=10.223.38.25

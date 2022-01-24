@@ -2,13 +2,13 @@
 import os
 import re
 import sys
-import numpy as np
 
 
 pattern = "Ultradns quiz application"
 ms_list = []
 
-file = open("/Users/shashidhar.buyakar/Downloads/MadeupLog.log", "r")
+file = open("/home/ec2-user/MadeupLog.log", "r")
+
 for line in file:
     if re.search(pattern, line):
         fields = line.strip().split()
@@ -18,9 +18,12 @@ file.close()
 
 lastn = ms_list[-20:]
 
-print("Mean: % s" %(np.average(lastn)))
+mean = sum(lastn) / float(len(lastn))
+variance = sum([((x - mean) ** 2) for x in lastn]) / len(lastn)
+res = variance ** 0.5
 
-print("Standard Deviation: % s" %(np.std(lastn)))
+print("Mean:" + ' ' + str(mean))
+print("Standard Deviation:" + ' ' + str(res))
 
 
 

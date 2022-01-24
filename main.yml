@@ -1,6 +1,6 @@
 ---
-- name: Configure instance(s)
-  hosts: localhost
+- name: Calculate Mean and Standard deviation
+  hosts: servers
   become: yes
   become_user: root
   remote_user: ec2-user 
