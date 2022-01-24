@@ -5,7 +5,7 @@
 
 ## What this playbook does
 - Replaces empty microseconds lines with 0 ms 
-- Runs a python script on remote hosts to calculate mean and standard deviation
+- Runs a python script on remote hosts to calculate mean and standard deviation of application timings
 - Returns the values as standard output like below
 ```bash
   TASK [readlog : Get stdout or stderr from the output] 
@@ -16,7 +16,7 @@
         ]
 ```
 
-# How to run the playbook
+## How to run the playbook
 ```bash
 - git clone https://github.com/shashibuyakar/ansible-readlogs.git
 - cd ansible-readlogs
