@@ -9,7 +9,7 @@
 - Returns the values as standard output like below
 ```bash
   TASK [readlog : Get stdout or stderr from the output] 
-    ok: [dev1] => {
+    ok: [localhost] => {
         "python_result.stdout_lines": [
             "Mean: 9.45",
             "Standard Deviation: 2.94066319051"
