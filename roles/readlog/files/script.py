@@ -7,7 +7,7 @@ import sys
 pattern = "Ultradns quiz application"
 ms_list = []
 
-file = open("/home/ec2-user/MadeupLog.log", "r")
+file = open("/var/log/ultradns-quiz-madeup.log", "r")
 
 for line in file:
     if re.search(pattern, line):

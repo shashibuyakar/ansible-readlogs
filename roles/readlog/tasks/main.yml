@@ -2,10 +2,10 @@
 # tasks file for readlog
   - name: Replace empty microseconds lines with 0 ms
     replace:
-      path: /home/ec2-user/MadeupLog.log
+      path: /var/log/ultradns-quiz-madeup.log
       regexp: "Ultradns quiz application took  ms" 
       replace: "Ultradns quiz application took 0 ms"
-      backup: no #change to yes for backup
+      backup: yes
 
   - name: Run the python script
     script: ./roles/readlog/files/script.py
