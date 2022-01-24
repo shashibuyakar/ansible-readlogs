@@ -1,7 +1,7 @@
 # ansible-readlogs
 ## Pre-requisites
+- Tested on ansible [core 2.12.1] and python version = 3.8.1
 - Authenticate all serverXX.quiz.example.neustar hosts using ssh keys
-- Create inventory file for above servers
 
 ## What this playbook does
 - Replaces empty microseconds lines with 0 ms 
